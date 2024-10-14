@@ -14,20 +14,32 @@ jobs:
       - uses: BSFishy/pip-action@v1
         with:
           packages: keymap-drawer
+
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build ZMK firmware
+        uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    runs-on: ubuntu-latest
+    needs: install
     permissions:
       contents: write
-    with:
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      amend_commit: false
-      install_branch: "main"
-      keymap_patterns: "config/*.keymap"
-      json_path: "config"
-      config_path: "keymap_drawer.config.yaml" # config file, ignored if not exists
-      output_folder: "keymap-drawer"
-      destination: "both"
-      parse_args: ""  # map of extra args to pass to `keymap parse`, e.g. "corne:'-l Def Lwr Rse' cradio:''"
-      draw_args: ""   # map of extra args to pass to `keymap draw`, e.g. "corne:'-k corne_rotated' cradio:'-k paroxysm'"
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Draw keymap
+        uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+        with:
+          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+          amend_commit: false
+          install_branch: "main"
+          keymap_patterns: "config/*.keymap"
+          json_path: "config"
+          config_path: "keymap_drawer.config.yaml"
+          output_folder: "keymap-drawer"
+          destination: "both"
+          parse_args: ""
+          draw_args: ""
