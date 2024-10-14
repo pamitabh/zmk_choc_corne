@@ -11,15 +11,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v4
+      
+      - name: Create virtual environment
+        run: python3 -m venv venv
   
-      - name: Install pipx
-        run: python3 -m pip install --user pipx
+      - name: Activate virtual environment
+        run: source venv/bin/activate
   
-      - name: Ensure pipx binary is on PATH
-        run: ~/.local/bin/pipx ensurepath
-  
-      - name: Install keymap-drawer with pipx
-        run: pipx install "git+https://github.com/caksoylar/keymap-drawer.git@main"
+      - name: Install keymap-drawer
+        run: venv/bin/pip install "git+https://github.com/caksoylar/keymap-drawer.git@main"
 
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
