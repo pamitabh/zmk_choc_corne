@@ -71,7 +71,7 @@
 
         soft_off {
             bindings = <&soft_off>;
-            key-positions = <26 0>;
+            key-positions = <26 0 13>;
             layers = <0>;
         };
 
