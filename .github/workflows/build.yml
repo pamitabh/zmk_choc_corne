@@ -14,7 +14,6 @@ jobs:
       - uses: BSFishy/pip-action@v1
         with:
           packages: keymap-drawer
-      - run: python main.py
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   draw:
