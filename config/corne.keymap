@@ -99,7 +99,7 @@
 &mt ESCAPE TAB    &kp Q  &kp W       &kp E           &kp R         &kp T    &kp UP_ARROW     &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
 &kp LEFT_CONTROL  &kp A  &kp S       &kp D           &kp F         &kp G    &kp DOWN_ARROW   &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
 &sk LEFT_SHIFT    &kp Z  &kp X       &kp C           &kp V         &kp B    &kp LEFT_ARROW   &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &mt RS(RET) RET
-                         &kp C_MUTE  &lt 2 LEFT_GUI  &kp LEFT_ALT  &mo 1    &kp RIGHT_ARROW  &mo 2  &kp SPACE  &mo 3
+                         &kp C_MUTE  &lt 2 LEFT_GUI  &kp LEFT_ALT  &mo 1    &kp RIGHT_ARROW  &sl 2  &kp SPACE  &mo 3
                                                                             &kp ENTER
             >;
 
@@ -138,11 +138,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT           &kp HASH   &kp DLLR   &kp PRCNT           &mmv MOVE_UP     &kp CARET          &kp AMPS        &kp ASTRK      &kp LPAR  &kp RPAR       &kp MINUS
-&kp GRAVE  &trans    &mkp RCLK        &mkp MCLK  &mkp LCLK  &kp LEFT_BRACE      &mmv MOVE_DOWN   &kp RIGHT_BRACE    &kp UNDERSCORE  &kp BACKSLASH  &kp PIPE  &kp PIPE       &kp PLUS
-&trans     &trans    &trans           &none      &none      &kp LEFT_BRACKET    &mmv MOVE_LEFT   &kp RIGHT_BRACKET  &trans          &trans         &trans    &kp BACKSLASH  &kp EQUAL
-                     &rgb_ug RGB_TOG  &trans     &trans     &trans              &mmv MOVE_RIGHT  &trans             &trans          &trans
-                                                                                &mkp LCLK
+&kp TILDE  &kp EXCL  &kp AT           &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK  &kp LPAR        &kp RPAR         &trans
+&kp GRAVE  &trans    &mkp RCLK        &mkp MCLK  &mkp LCLK  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp PLUS   &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp PIPE
+&trans     &trans    &trans           &none      &none      &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp EQUAL  &kp LBKT        &kp RBKT         &kp BACKSLASH
+                     &rgb_ug RGB_TOG  &trans     &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
+                                                                         &mkp LCLK
             >;
 
             label = "SYMBOL";
