@@ -6,12 +6,18 @@ on:
       - "config/**"
 
 jobs:
-  install:
+
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    
+  draw:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
-      
+
       - name: Create virtual environment
         run: python3 -m venv venv
 
@@ -21,23 +27,16 @@ jobs:
       - name: Install keymap-drawer
         run: venv/bin/pip install "git+https://github.com/caksoylar/keymap-drawer.git@main"
 
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    needs: install
-
-  draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    needs: install
-    permissions:
-      contents: write
-    with:
-      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-      amend_commit: false
-      install_branch: "main"
-      keymap_patterns: "config/*.keymap"
-      json_path: "config"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: "keymap-drawer"
-      destination: "both"
-      parse_args: ""
-      draw_args: ""
+      - name: Run draw job
+        uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+        with:
+          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+          amend_commit: false
+          install_branch: "main"
+          keymap_patterns: "config/*.keymap"
+          json_path: "config"
+          config_path: "keymap_drawer.config.yaml"
+          output_folder: "keymap-drawer"
+          destination: "both"
+          parse_args: ""
+          draw_args: ""
