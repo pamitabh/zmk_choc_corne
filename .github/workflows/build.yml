@@ -6,6 +6,13 @@ on:
       - "config/**"
 
 jobs:
+  steps:
+    # You may pin to the exact commit or the version.
+    # uses: BSFishy/pip-action@8f2d471d809dc20b6ada98c91910b6ae6243f318
+    uses: BSFishy/pip-action@v1
+    with:
+      # The packages to install from Pip
+      packages: keymap-drawer
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
   draw:
