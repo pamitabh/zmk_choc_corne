@@ -16,26 +16,22 @@ jobs:
           packages: keymap-drawer
 
   build:
-      uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    needs: install
 
   draw:
-    runs-on: ubuntu-latest
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     needs: install
     permissions:
       contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Draw keymap
-        uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-        with:
-          commit_message: "[Draw] ${{ github.event.head_commit.message }}"
-          amend_commit: false
-          install_branch: "main"
-          keymap_patterns: "config/*.keymap"
-          json_path: "config"
-          config_path: "keymap_drawer.config.yaml"
-          output_folder: "keymap-drawer"
-          destination: "both"
-          parse_args: ""
-          draw_args: ""
+    with:
+      commit_message: "[Draw] ${{ github.event.head_commit.message }}"
+      amend_commit: false
+      install_branch: "main"
+      keymap_patterns: "config/*.keymap"
+      json_path: "config"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"
+      destination: "both"
+      parse_args: ""
+      draw_args: ""
