@@ -9,23 +9,22 @@ jobs:
   build:
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
 
-  draw:
-    runs-on: ubuntu-latest
-    needs: build
-    permissions:
-      contents: write
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v4
+#   draw:
+#     runs-on: ubuntu-latest
+#     permissions:
+#       contents: write
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-python@v4
 
-      - name: Create virtual environment
-        run: python3 -m venv venv
+#       - name: Create virtual environment
+#         run: python3 -m venv venv
 
-      - name: Activate virtual environment
-        run: source venv/bin/activate
+#       - name: Activate virtual environment
+#         run: source venv/bin/activate
 
-      - name: Install keymap-drawer
-        run: venv/bin/pip install "git+https://github.com/caksoylar/keymap-drawer.git@main"
-
-      - name: Run draw job
-        run: venv/bin/python -m keymap_drawer.draw --commit_message "[Draw] ${{ github.event.head_commit.message }}" --amend_commit false --install_branch "main" --keymap_patterns "config/*.keymap" --json_path "config" --config_path "keymap_drawer.config.yaml" --output_folder "keymap-drawer" --destination "both" --parse_args "" --draw_args ""
+#       - name: Install keymap-drawer
+#         run: venv/bin/pip install "git+https://github.com/caksoylar/keymap-drawer.git@main"
+# keymap parse -c 10 -z ~/zmk-config/config/cradio.keymap >sweep_keymap.yaml
+#       - name: Run draw job
+#         run: venv/bin/python -m keymap_drawer.draw --commit_message "[Draw] ${{ github.event.head_commit.message }}" --amend_commit false --install_branch "main" --keymap_patterns "config/*.keymap" --json_path "config" --config_path "keymap_drawer.config.yaml" --output_folder "keymap-drawer" --destination "both" --parse_args "" --draw_args ""
