@@ -162,11 +162,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT           &kp HASH  &kp DLLR  &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
-&kp GRAVE  &trans    &trans           &trans    &trans    &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&trans     &trans    &trans           &none     &none     &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS   &kp LBKT              &kp RBKT               &kp FSLH
-                     &rgb_ug RGB_TOG  &trans    &trans    &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
-                                                                       &mkp LCLK
+&kp TILDE  &kp EXCL  &kp AT           &kp HASH         &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK             &kp LEFT_BRACE         &kp RIGHT_BRACE  &trans
+&kp GRAVE  &trans    &kp LBKT         &kp RBKT         &kp EQUAL  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE         &trans
+&trans     &trans    &kp LEFT_BRACE   &kp RIGHT_BRACE  &none      &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS              &kp BACKSLASH          &kp FSLH         &trans
+                     &rgb_ug RGB_TOG  &trans           &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
+                                                                               &mkp LCLK
             >;
 
             label = "SYMBOL";
