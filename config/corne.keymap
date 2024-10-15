@@ -120,11 +120,11 @@
             //                                                      enter
 
             bindings = <
-&mt ESCAPE TAB                &kp Q  &kp W       &kp E           &kp R         &kp T    &kp UP_ARROW     &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
-&kp LEFT_CONTROL              &kp A  &kp S       &kp D           &kp F         &kp G    &kp DOWN_ARROW   &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
-&quick_release_sk LEFT_SHIFT  &kp Z  &kp X       &kp C           &kp V         &kp B    &kp LEFT_ARROW   &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &td_sticky_shift_enter
-                                     &kp C_MUTE  &lt 2 LEFT_GUI  &kp LEFT_ALT  &mo 1    &kp RIGHT_ARROW  &sl 2  &kp SPACE  &sl 3
-                                                                                        &kp ENTER
+&mt ESCAPE TAB    &kp Q  &kp W       &kp E           &kp R         &kp T    &kp UP_ARROW     &kp Y  &kp U      &kp I      &kp O    &kp P     &kp BSPC
+&kp LEFT_CONTROL  &kp A  &kp S       &kp D           &kp F         &kp G    &kp DOWN_ARROW   &kp H  &kp J      &kp K      &kp L    &kp SEMI  &kp SINGLE_QUOTE
+&kp LEFT_SHIFT    &kp Z  &kp X       &kp C           &kp V         &kp B    &kp LEFT_ARROW   &kp N  &kp M      &kp COMMA  &kp DOT  &kp FSLH  &td_sticky_shift_enter
+                         &kp C_MUTE  &lt 2 LEFT_GUI  &kp LEFT_ALT  &mo 1    &kp RIGHT_ARROW  &sl 2  &kp SPACE  &sl 3
+                                                                            &kp ENTER
             >;
 
             label = "QWERTY";
@@ -141,9 +141,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans           &kp N1  &kp N2           &kp N3    &kp N4    &kp N5    &mmv MOVE_UP     &kp N6  &kp N7  &kp N8  &kp N9  &kp SLASH  &kp ASTERISK
-&bt BT_NXT       &trans  &mkp MB2         &mkp MB3  &mkp MB1  &trans    &mmv MOVE_DOWN   &trans  &kp N4  &kp N5  &kp N6  &kp MINUS  &kp PLUS
-&rgb_ug RGB_EFF  &trans  &trans           &trans    &trans    &trans    &mmv MOVE_LEFT   &trans  &kp N1  &kp N2  &kp N3  &kp DOT    &kp RET
+&trans           &kp N1  &kp N2           &kp N3    &kp N4    &kp N5    &mmv MOVE_UP     &kp N6  &kp N7  &kp N8  &kp N9  &kp SLASH     &kp MINUS
+&bt BT_NXT       &trans  &mkp MB2         &mkp MB3  &mkp MB1  &trans    &mmv MOVE_DOWN   &trans  &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp PLUS
+&rgb_ug RGB_EFF  &trans  &trans           &trans    &trans    &trans    &mmv MOVE_LEFT   &trans  &kp N1  &kp N2  &kp N3  &kp DOT       &kp RET
                          &rgb_ug RGB_TOG  &trans    &trans    &trans    &mmv MOVE_RIGHT  &trans  &trans  &kp N0
                                                                         &mkp LCLK
             >;
@@ -162,11 +162,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp EXCL  &kp AT           &kp HASH   &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &trans
-&kp GRAVE  &trans    &mkp RCLK        &mkp MCLK  &mkp LCLK  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&trans     &trans    &trans           &none      &none      &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS   &kp LBKT              &kp RBKT               &kp BACKSLASH
-                     &rgb_ug RGB_TOG  &trans     &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
-                                                                         &mkp LCLK
+&kp TILDE  &kp EXCL  &kp AT           &kp HASH  &kp DLLR  &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE
+&kp GRAVE  &trans    &trans           &trans    &trans    &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp EQUAL  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&trans     &trans    &trans           &none     &none     &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS   &kp LBKT              &kp RBKT               &kp FSLH
+                     &rgb_ug RGB_TOG  &trans    &trans    &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
+                                                                       &mkp LCLK
             >;
 
             label = "SYMBOL";
