@@ -141,11 +141,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans           &kp N1  &kp N2           &kp N3    &kp N4    &kp N5    &mmv MOVE_UP     &kp N6  &kp N7  &kp N8  &kp N9  &kp SLASH     &kp MINUS
-&bt BT_NXT       &trans  &mkp MB2         &mkp MB3  &mkp MB1  &trans    &mmv MOVE_DOWN   &trans  &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp PLUS
-&rgb_ug RGB_EFF  &trans  &trans           &trans    &trans    &trans    &mmv MOVE_LEFT   &trans  &kp N1  &kp N2  &kp N3  &kp DOT       &kp RET
-                         &rgb_ug RGB_TOG  &trans    &trans    &trans    &mmv MOVE_RIGHT  &trans  &trans  &kp N0
-                                                                        &mkp LCLK
+&trans  &kp N1           &kp N2           &kp N3    &kp N4    &kp N5        &mmv MOVE_UP     &kp N6  &kp N7  &kp N8  &kp N9  &kp SLASH     &kp MINUS
+&trans  &trans           &mkp MB2         &mkp MB3  &mkp MB1  &trans        &mmv MOVE_DOWN   &trans  &kp N4  &kp N5  &kp N6  &kp ASTERISK  &kp PLUS
+&trans  &rgb_ug RGB_EFF  &trans           &trans    &trans    &bt BT_NXT    &mmv MOVE_LEFT   &trans  &kp N1  &kp N2  &kp N3  &kp DOT       &kp RET
+                         &rgb_ug RGB_TOG  &trans    &trans    &trans        &mmv MOVE_RIGHT  &trans  &trans  &kp N0
+                                                                            &mkp LCLK
             >;
 
             label = "NUMBER";
@@ -162,8 +162,8 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TILDE  &kp EXCL         &kp AT           &kp HASH         &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK             &trans                 &kp PIPE       &trans
-&kp GRAVE  &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
+&kp GRAVE  &kp EXCL         &kp AT           &kp HASH         &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK             &trans                 &kp PIPE       &trans
+&trans     &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
 &trans     &trans           &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp PLUS   &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS              &trans                 &kp FSLH       &trans
                             &rgb_ug RGB_TOG  &trans           &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
                                                                                       &mkp LCLK
