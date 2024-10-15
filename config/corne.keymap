@@ -43,6 +43,8 @@
             label = "TD_STICKY_SHIFT_ENTER";
             #binding-cells = <0>;
             bindings = <&quick_release_sk RIGHT_SHIFT>, <&kp RET>;
+
+            tapping-term-ms = <400>;
         };
 
         quick_release_sk: quick_release_sk {
@@ -100,6 +102,7 @@
         caps_lock {
             bindings = <&caps_word>;
             key-positions = <26 13>;
+            layers = <0>;
         };
     };
 
