@@ -13,7 +13,7 @@
 #define U_MS_L &mmv MOVE_LEFT
 #define U_MS_R &mmv MOVE_RIGHT
 
-&mt { flavor = "balanced"; };
+&mt { flavor = "tap-preferred"; };
 
 / {
     behaviors {
