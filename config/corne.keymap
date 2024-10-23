@@ -156,10 +156,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp N1           &kp N2           &kp N3    &kp N4    &kp N5        &mmv MOVE_UP     &kp N6  &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SLASH
-&trans  &trans           &mkp MB2         &mkp MB3  &mkp MB1  &trans        &mmv MOVE_DOWN   &trans  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp ASTERISK
-&trans  &rgb_ug RGB_EFF  &trans           &trans    &trans    &bt BT_NXT    &mmv MOVE_LEFT   &trans  &kp N1  &kp N2  &kp N3  &kp DOT    &kp RET
-                         &rgb_ug RGB_TOG  &trans    &trans    &trans        &mmv MOVE_RIGHT  &trans  &trans  &kp N0
+&trans  &none            &none            &none     &none     &none         &mmv MOVE_UP     &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS  &kp SLASH
+&trans  &none            &mkp MB2         &mkp MB3  &mkp MB1  &none         &mmv MOVE_DOWN   &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp PLUS   &kp ASTERISK
+&trans  &rgb_ug RGB_EFF  &none            &none     &none     &bt BT_NXT    &mmv MOVE_LEFT   &none         &kp N1  &kp N2  &kp N3  &kp DOT    &kp RET
+                         &rgb_ug RGB_TOG  &none     &none     &none         &mmv MOVE_RIGHT  &none         &none   &kp N0
                                                                             &mkp LCLK
             >;
 
@@ -177,11 +177,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp EXCL         &kp AT           &kp HASH         &kp DLLR   &kp PRCNT    &mmv MOVE_UP     &kp CARET  &kp AMPS        &kp ASTRK             &trans                 &kp PIPE       &trans
-&trans     &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &trans       &mmv MOVE_DOWN   &trans     &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH  &trans
-&trans     &trans           &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp PLUS   &trans       &mmv MOVE_LEFT   &trans     &kp MINUS       &kp PLUS              &trans                 &kp FSLH       &trans
-                            &rgb_ug RGB_TOG  &trans           &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans          &trans
-                                                                                      &mkp LCLK
+&trans  &kp GRAVE        &kp AT           &kp HASH         &kp DLLR   &kp PRCNT      &mmv MOVE_UP     &kp CARET      &kp AMPS        &kp ASTRK             &trans                 &trans         &trans
+&trans  &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &kp PERCENT    &mmv MOVE_DOWN   &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE       &trans
+&trans  &trans           &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp HASH   &trans         &mmv MOVE_LEFT   &kp CARET      &kp MINUS       &kp PLUS              &kp ASTERISK           &kp BACKSLASH  &trans
+                         &rgb_ug RGB_TOG  &trans           &trans     &trans         &mmv MOVE_RIGHT  &trans         &trans          &trans
+                                                                                     &mkp LCLK
             >;
 
             label = "SYMBOL";
@@ -191,10 +191,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&bt BT_CLR  &kp F1   &kp F2                 &kp F3  &kp F4  &kp F5          &rgb_ug RGB_BRI  &trans           &trans            &trans      &trans  &kp PRINTSCREEN  &trans
-&trans      &kp F6   &kp F7                 &kp F8  &kp F9  &kp F10         &rgb_ug RGB_BRD  &trans           &trans            &trans      &trans  &kp HOME         &kp PAGE_UP
-&caps_word  &kp F11  &kp F12                &trans  &trans  &out OUT_TOG    &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &trans      &trans  &kp END          &kp PAGE_DOWN
-                     &kp C_BRIGHTNESS_AUTO  &trans  &trans  &trans          &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT
+&bt BT_CLR  &kp F1   &kp F2                 &kp F3  &kp F4  &kp F5          &rgb_ug RGB_BRI  &none            &none             &none       &none  &kp PRINTSCREEN  &none
+&trans      &kp F6   &kp F7                 &kp F8  &kp F9  &kp F10         &rgb_ug RGB_BRD  &none            &none             &none       &none  &kp HOME         &kp PAGE_UP
+&caps_word  &kp F11  &kp F12                &none   &none   &out OUT_TOG    &rgb_ug RGB_HUD  &rgb_ug RGB_SPI  &rgb_ug RGB_SPD   &none       &none  &kp END          &kp PAGE_DOWN
+                     &kp C_BRIGHTNESS_AUTO  &none   &none   &none           &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT
                                                                             &bootloader
             >;
 
