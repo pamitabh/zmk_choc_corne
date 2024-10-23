@@ -80,7 +80,7 @@
             #binding-cells = <0>;
             bindings = <&kp TAB>, <&kp ESCAPE>;
 
-            tapping-term-ms = <400>;
+            tapping-term-ms = <250>;
         };
 
         mmv {
