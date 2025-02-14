@@ -1,9 +1,12 @@
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -182,11 +185,11 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &kp GRAVE        &kp AT           &kp HASH         &kp DLLR   &none          &mmv MOVE_UP     &none          &none           &none                 &none                  &none          &trans
-&trans  &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &kp PERCENT    &mmv MOVE_DOWN   &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE       &trans
-&trans  &none            &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp HASH   &none          &mmv MOVE_LEFT   &kp CARET      &kp MINUS       &kp PLUS              &kp ASTERISK           &kp BACKSLASH  &trans
-                         &rgb_ug RGB_TOG  &trans           &trans     &trans         &mmv MOVE_RIGHT  &trans         &trans          &trans
-                                                                                     &mkp LCLK
+&kp TILDE  &kp GRAVE        &kp AT           &kp HASH         &kp DLLR   &none          &mmv MOVE_UP     &none          &none           &none                 &none                  &none          &trans
+&trans     &kp EXCLAMATION  &kp LBKT         &kp RBKT         &kp EQUAL  &kp PERCENT    &mmv MOVE_DOWN   &kp AMPERSAND  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE       &trans
+&trans     &none            &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp HASH   &none          &mmv MOVE_LEFT   &kp CARET      &kp MINUS       &kp PLUS              &kp ASTERISK           &kp BACKSLASH  &trans
+                            &rgb_ug RGB_TOG  &trans           &trans     &trans         &mmv MOVE_RIGHT  &trans         &trans          &trans
+                                                                                        &mkp LCLK
             >;
 
             label = "SYMBOL";
@@ -199,7 +202,7 @@
 &bt BT_CLR  &kp F1   &kp F2       &kp F3          &kp F4     &kp F5          &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI   &kp C_AL_WWW  &none  &kp PRINTSCREEN  &kp INS
 &trans      &kp F6   &kp F7       &kp F8          &kp F9     &kp F10         &rgb_ug RGB_BRD  &none            &none             &none         &none  &kp HOME         &kp PAGE_UP
 &caps_word  &kp F11  &kp F12      &none           &soft_off  &out OUT_TOG    &rgb_ug RGB_HUD  &none            &soft_off         &none         &none  &kp END          &kp PAGE_DOWN
-                     &bootloader  &kp C_PREVIOUS  &kp C_PP   &kp C_NEXT      &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &kp C_NEXT
+                     &bootloader  &kp C_PREVIOUS  &kp C_PP   &kp C_NEXT      &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &trans
                                                                              &bootloader
             >;
 
