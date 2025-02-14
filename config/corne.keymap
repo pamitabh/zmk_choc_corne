@@ -202,7 +202,7 @@
 &bt BT_CLR  &kp F1   &kp F2       &kp F3          &kp F4     &kp F5          &rgb_ug RGB_BRI  &rgb_ug RGB_SPD  &rgb_ug RGB_SPI   &kp C_AL_WWW  &none  &kp PRINTSCREEN  &kp INS
 &trans      &kp F6   &kp F7       &kp F8          &kp F9     &kp F10         &rgb_ug RGB_BRD  &none            &none             &none         &none  &kp HOME         &kp PAGE_UP
 &caps_word  &kp F11  &kp F12      &none           &soft_off  &out OUT_TOG    &rgb_ug RGB_HUD  &none            &soft_off         &none         &none  &kp END          &kp PAGE_DOWN
-                     &bootloader  &kp C_PREVIOUS  &kp C_PP   &kp C_NEXT      &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &trans
+                     &bootloader  &kp C_PREVIOUS  &kp C_PP   &kp C_NEXT      &rgb_ug RGB_HUI  &kp C_PREV       &kp C_PLAY_PAUSE  &none
                                                                              &bootloader
             >;
 
