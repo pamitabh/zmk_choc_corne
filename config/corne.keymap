@@ -21,56 +21,6 @@
 
 / {
     behaviors {
-        td_shift_caps: td_shift_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_SHIFT_CAPS";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
-        };
-
-        scroll_hue: scroll_hue {
-            compatible = "zmk,behavior-sensor-rotate";
-            #sensor-binding-cells = <0>;
-            bindings = <&rgb_ug RGB_HUI>, <&rgb_ug RGB_HUD>;
-
-            tap-ms = <30>;
-            label = "SCROLL_HUE";
-        };
-
-        scroll_screen_brightness: scroll_screen_brightness {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "SCROLL_SCREEN_BRIGHTNESS";
-            #sensor-binding-cells = <0>;
-            bindings = <&kp C_BRIGHTNESS_INC>, <&kp C_BRIGHTNESS_DEC>;
-        };
-
-        td_sticky_shift_enter: td_sticky_shift_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_STICKY_SHIFT_ENTER";
-            #binding-cells = <0>;
-            bindings = <&quick_release_sk RIGHT_SHIFT>, <&kp RET>;
-
-            tapping-term-ms = <400>;
-        };
-
-        quick_release_sk: quick_release_sk {
-            compatible = "zmk,behavior-sticky-key";
-            label = "QUICK_RELEASE_SK";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            quick-release;
-            release-after-ms = <1000>;
-        };
-
-        tdd_shift_enter: tdd_shift_enter {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TDD_SHIFT_ENTER";
-            #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT>, <&kp RET>, <&kp RS(RET)>;
-
-            tapping-term-ms = <500>;
-        };
-
         mm_bspc_del: mm_bspc_del {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_BSPC_DEL";
@@ -78,15 +28,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        td_tab_escape: td_tab_escape {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_TAB_ESCAPE";
-            #binding-cells = <0>;
-            bindings = <&kp TAB>, <&kp ESCAPE>;
-
-            tapping-term-ms = <250>;
         };
 
         num_word: num_word {
@@ -107,21 +48,6 @@
             time-to-max-speed-ms = <400>;      // 500
             delay-ms = <0>;                   // 10
         };
-    };
-
-    scroll_rgb_brightness: scroll_rgb_brightness {
-        compatible = "zmk,behavior-sensor-rotate";
-        label = "SCROLL_RGB_BRIGHTNESS";
-        #sensor-binding-cells = <0>;
-        bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
-    };
-
-    scroll_encoder: scroll_encoder {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <30>;
     };
 
     combos {
